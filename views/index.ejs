@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/dist/index.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light border-bottom border-2 py-0">
+        <div class="container justify-content-start text-light">
+            <div class="d-flex flex-column align-items-center text-primary p-2 me-4 border-bottom border-2 border-primary"
+                role="button">
+                <i data-feather="home" width="1.75rem" height="1.75rem" class="text-center" stroke-width="2"></i>
+                <span class="fw-bold fs-6">Home</span>
+            </div>
+            <div class="d-flex flex-column align-items-center p-2 mx-4 border-bottom border-2 border-primary"
+                role="button">
+                <i data-feather="book" width="1.75rem" height="1.75rem" class="text-center" stroke-width="2"></i>
+                <span class="fw-bold fs-6">Subjects</span>
+            </div>
+            <div class="d-flex flex-column align-items-center p-2 ms-4 border-bottom border-2 border-primary"
+                role="button">
+                <i data-feather="activity" width="1.75rem" height="1.75rem" class="text-center" stroke-width="2"></i>
+                <span class="fw-bold fs-6">Activity</span>
+            </div>
+            <div class="collapse navbar-collpase text-secondary ms-auto">
+                <i data-feather="settings" width="1.25rem" height="1.25rem" class="text-center me-4"
+                    stroke-width="2"></i>
+                <i data-feather="circle" width="2.5rem" height="2.5rem" class="text-center" fill="#707070"
+                    stroke-width="2"></i>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-5">
+        <div class="row">
+            <div class="col-4 pe-5">
+                <h1 class="fs-4 fw-bold mb-3">Pomodoro Timer</h1>
+                <div class="card border-2 mb-3">
+                    <div class="card-body p-4">
+                        <div class="row">
+                            <div class="col-6">
+                                <h2 class="fs-3 text-dark mb-0">Study</h2>
+                                <p class="fw-bold fs-1 mb-0">
+                                    <span contenteditable>25</span>:<span contenteditable>00</span>
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <h2 class="fs-3 text-dark mb-0">Break</h2>
+                                <p class="fw-bold fs-1 mb-0">
+                                    <span contenteditable>25</span>:<span contenteditable>00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary text-white mt-2">Start</button>
+                    </div>
+                    <div class="card-footer border-2 bg-white text-light p-3">
+                        <% for(let i=0; i < 5; i++) { %>
+                            <i data-feather="circle" width="1.25rem" height="1.25rem" class="text-center ms-1"
+                                fill="#D1D1D1" stroke-width="2"></i>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 px-5">
+                <h1 class="fs-4 fw-bold">New Topics</h1>
+            </div>
+            <div class="col-4 ps-5">
+                <h1 class="fs-4 fw-bold">Revision</h1>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"
+        integrity="sha512-7x3zila4t2qNycrtZ31HO0NnJr8kg2VI67YLoRSyi9hGhRN66FHYWr7Axa9Y1J9tGYHVBPqIjSE1ogHrJTz51g=="
+        crossorigin="anonymous"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
