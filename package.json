@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js && webpack",
-    "build": "webpack --watch"
+    "build": "webpack",
+    "build:dev": "webpack --watch"
   },
   "author": "Aditya D.S.",
   "license": "MIT",
