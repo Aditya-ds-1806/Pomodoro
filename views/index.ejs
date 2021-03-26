@@ -40,12 +40,21 @@
             <div class="col-4 pe-5">
                 <h1 class="fs-4 mb-3">Pomodoro Timer</h1>
                 <%- include('partials/timer') %>
+                    <h1 class="fs-4 mb-3">Streak Challenge</h1>
             </div>
             <div class="col-4 px-5">
-                <h1 class="fs-4">New Topics</h1>
+                <h1 class="fs-4 mb-3">New Topics</h1>
+                <%- include('partials/topic-header') %>
+                <% for(let i=0; i<4; i++) { %>
+                <%- include('partials/topic') %>
+                <% } %>
             </div>
             <div class="col-4 ps-5">
-                <h1 class="fs-4">Revision</h1>
+                <h1 class="fs-4 mb-3">Revision</h1>
+                <%- include('partials/topic-header') %>
+                <% for(let i=0; i<5; i++) { %>
+                <%- include('partials/topic') %>
+                <% } %>
             </div>
         </div>
     </main>
