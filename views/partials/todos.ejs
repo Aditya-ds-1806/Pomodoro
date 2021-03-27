@@ -1,0 +1,27 @@
+<div class="col-4 px-0">
+    <div class="card border-0 h-100 outline-2">
+        <div class="card-header bg-white border-2 py-2 px-4">
+            <h1 class="fs-4 mb-0">Triangles</h1>
+        </div>
+        <div class="card-body py-3 px-4">
+            <div class="mb-4">
+                <h2 class="card-title text-secondary fs-5">Pre-requisites</h2>
+                <p class="card-text fw-bolder fs-5 px-2 py-1 chapter-gradient d-inline">Chapter A</p>
+            </div>
+            <div>
+                <h2 class="card-title text-secondary fs-5 mb-1">Last studied</h2>
+                <p class="card-text fw-bolder fs-5">12 days ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-4 px-0">
+    <%-include('topic', {todos: true, background: 'linear-gradient(270deg, #82FFBC 0%, #FFFFFF 200%)'}) %>
+    <%-include('topic', {todos: true, background: '#FFF'}) %>
+    <%-include('topic', {todos: true, background: 'linear-gradient(270deg, #82FFBC 0%, #E09D8C 70%, #FF7C7C 100%)'}) %>
+</div>
+<div class="col-4 px-0">
+    <%-include('topic', {todos: true, background: '#FFF'}) %>
+    <%-include('topic', {todos: true, background: '#FFF'}) %>
+    <%-include('topic', {todos: true, background: '#FFF'}) %>
+</div>
