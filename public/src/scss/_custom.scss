@@ -18,11 +18,6 @@ $font-weight-bold: 600;
 $font-weight-bolder: 700;
 $headings-font-weight: 700;
 $body-color: #000;
-$progress-border-radius: 0;
+$progress-border-radius: 0.125rem;
 $progress-bg: #fff;
 $progress-bar-bg: #000;
-
-.active-nav {
-    box-shadow: 0 2px 0 0 $primary;
-    color: $primary;
-}
