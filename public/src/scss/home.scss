@@ -1,17 +1,5 @@
-@import "custom";
-@import "~bootstrap/scss/bootstrap-reboot";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-
-@import "~bootstrap/scss/utilities";
-@import "~bootstrap/scss/helpers";
-@import "~bootstrap/scss/utilities/api";
+@import "common";
 @import "~bootstrap/scss/buttons";
-@import "~bootstrap/scss/navbar";
-@import "~bootstrap/scss/nav";
-@import "~bootstrap/scss/containers";
-@import "~bootstrap/scss/grid";
-@import "~bootstrap/scss/card";
-@import "~bootstrap/scss/progress";
 
 .active-nav {
     box-shadow: 0 2px 0 0 $primary;
