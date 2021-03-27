@@ -21,3 +21,8 @@ $body-color: #000;
 $progress-border-radius: 0;
 $progress-bg: #fff;
 $progress-bar-bg: #000;
+
+.active-nav {
+    box-shadow: 0 2px 0 0 $primary;
+    color: $primary;
+}
