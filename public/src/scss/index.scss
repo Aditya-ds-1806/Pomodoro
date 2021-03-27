@@ -12,3 +12,12 @@
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/progress";
+
+.active-nav {
+    box-shadow: 0 2px 0 0 $primary;
+    color: $primary;
+}
+
+.border-black {
+    border-color: #000 !important;
+}
