@@ -16,6 +16,10 @@ app.get('/dashboard/subjects', (req, res) => {
     res.render('subjects');
 });
 
+app.get('/dashboard/subjects/math', (req, res) => {
+    res.render('manage-subject');
+});
+
 app.listen(process.env.PORT || 3000, process.env.IP, () => {
     console.log(`Server running at http://localhost:${process.env.PORT || 3000}`);
 });
