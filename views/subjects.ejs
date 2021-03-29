@@ -17,11 +17,11 @@
             </header>
             <main>
                 <div class="row container px-5">
-                    <% for(let i = 0; i < 5; i++) { %>
+                    <% courses.forEach(course => { %>
                     <div class="col-4 mb-5 px-4">
-                        <%- include('partials/subject') %>
+                        <%- include('partials/subject', {course}) %>
                     </div>
-                    <% } %>
+                    <% }) %>
                 </div>
             </main>
         </main>

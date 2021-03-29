@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Mathematics</title>
+    <title>Dashboard | <%= course %></title>
     <link rel="stylesheet" href="/dist/subjects.css">
 </head>
 
@@ -13,19 +13,19 @@
     <%- include('partials/navbar', {subjects: true}) %>
         <main class="container mt-5">
             <header class="mb-4">
-                <h1 class="fs-3 text-center">Mathematics</h1>
+                <h1 class="fs-3 text-center text-capitalize"><%= course %></h1>
             </header>
             <main>
                 <div class="row container pe-5 mb-5">
                     <div class="col-4 px-4">
-                        <%- include('partials/subject') %>
+                        <%- include('partials/subject', {course}) %>
                     </div>
                 </div>
-                <% for(let i = 0; i < 4; i++) { %>
+                <% syllabus.forEach(section => { %>
                 <div class="row container px-5 mb-5">
-                    <%- include('partials/todos') %>
+                    <%- include('partials/todos', {section}) %>
                 </div>
-                <% } %>
+                <% }) %>
             </main>
         </main>
         <script src="/dist/subjects.js"></script>
