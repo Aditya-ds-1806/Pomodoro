@@ -33,7 +33,7 @@ app.use('/dashboard', dashboardRoutes);
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.redirect('/dashboard/home');
+    res.redirect('/login');
 });
 
 app.listen(process.env.PORT || 3000, process.env.IP, () => {
