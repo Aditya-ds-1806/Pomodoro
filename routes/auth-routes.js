@@ -1,17 +1,19 @@
 const router = require('express').Router();
 const passport = require('passport');
+const { hasAuthenticated, hasNotAuthenticated } = require('../middlewares/authentication');
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    if (req.isAuthenticated()) return res.redirect('/dashboard/home');
+    return res.render('login');
 });
 
-router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'], prompt: 'select_account' }));
+router.get('/auth/google', hasNotAuthenticated, passport.authenticate('google', { scope: ['profile', 'email'], prompt: 'select_account' }));
 
-router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
-    res.redirect('/');
+router.get('/auth/google/callback', hasNotAuthenticated, passport.authenticate('google', { failureRedirect: '/login' }), (req, res) => {
+    res.redirect('/dashboard/home');
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', hasAuthenticated, (req, res) => {
     req.logout();
     res.redirect('/login');
 });

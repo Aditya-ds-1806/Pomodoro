@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const { getSubjects, getSyllabus } = require('../controllers/subjects');
+const { hasAuthenticated } = require('../middlewares/authentication');
+
+router.use(hasAuthenticated);
 
 router.get('/home', (req, res) => {
     res.render('index');
