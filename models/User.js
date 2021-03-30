@@ -4,6 +4,8 @@ const userSchema = new mongoose.Schema({
     name: String,
     avatar: String,
     grade: Number,
+    email: String,
+    googleID: String,
     newTopics: [String],
     revision: [String],
 });
