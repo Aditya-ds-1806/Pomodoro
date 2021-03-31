@@ -6,8 +6,22 @@ const userSchema = new mongoose.Schema({
     grade: Number,
     email: String,
     googleID: String,
-    newTopics: [String],
-    revision: [String],
+    new: [{
+        chapter: String,
+        topic: String,
+        _id: false,
+    }],
+    revising: [{
+        chapter: String,
+        topic: String,
+        _id: false,
+    }],
+    revised: [{
+        chapter: String,
+        topic: String,
+        date: Date,
+        _id: false,
+    }],
 });
 
 const User = mongoose.model('User', userSchema);
