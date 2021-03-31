@@ -18,7 +18,7 @@
 <div class="col-8 d-flex flex-wrap px-0">
     <% section.topics.forEach(topic => { %>
         <div class="col-6">
-            <%-include('topic', {topic, todos: true, background: '#FFF'}) %>
+            <%- include('topic', {topic, todos: true, background: '#FFF', chapter: section.chapter}) %>
         </div>
     <% }) %>
 </div>
