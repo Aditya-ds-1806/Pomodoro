@@ -15,16 +15,16 @@
             </div>
         </div>
         <% if(!todos) { %>
-        <div class="text-secondary">
-            <i data-feather="clock" width="1.25rem" height="1.25rem" class="text-center" stroke-width="2"></i>
-            <i data-feather="check" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2"></i>
-            <i data-feather="minus" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2"></i>
+        <div class="text-secondary" style="min-width: fit-content;">
+            <i data-feather="clock" width="1.25rem" height="1.25rem" class="text-center" stroke-width="2" role="button"></i>
+            <i data-feather="check" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2" role="button"></i>
+            <i data-feather="minus" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2" role="button"></i>
         </div>
         <% } else { %>
-        <div class="text-secondary ps-2" style="min-width: fit-content;">
-            <i data-feather="clock" width="1.25rem" height="1.25rem" class="text-center" stroke-width="2"></i>
-            <i data-feather="plus" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2"></i>
-            <i data-feather="check" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2"></i>
+        <div class="text-secondary ps-2" style="min-width: fit-content;" data-topic="<%= topic %>" data-chapter="<%= chapter %>">
+            <i data-feather="clock" width="1.25rem" height="1.25rem" class="text-center" stroke-width="2" role="button"></i>
+            <i data-feather="plus" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2" role="button"></i>
+            <i data-feather="check" width="1.25rem" height="1.25rem" class="text-center ms-4" stroke-width="2" role="button"></i>
         </div>
         <% } %>
     </div>
