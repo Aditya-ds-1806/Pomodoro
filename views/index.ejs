@@ -23,8 +23,8 @@
                 <% if(newTopics.length) { %>
                 <%- include('partials/progress', {w: '4.5rem'}) %>
                 <% } %>
-                <% newTopics.forEach(({ topic }) => { %>
-                <%- include('partials/topic', {todos: false, background: '#FFF', topic}) %>
+                <% newTopics.forEach(({ topic, chapter }) => { %>
+                <%- include('partials/topic', {todos: false, background: '#FFF', topic, chapter}) %>
                 <% }) %>
             </div>
             <div class="col-4 ps-5">
@@ -32,8 +32,8 @@
                 <% if(newTopics.length) { %>
                 <%- include('partials/progress', {w: '4.5rem'}) %>
                 <% } %>
-                <% revisingTopics.forEach(({ topic }) => { %>
-                <%- include('partials/topic', {todos: false, background: '#FFF', topic}) %>
+                <% revisingTopics.forEach(({ topic, chapter }) => { %>
+                <%- include('partials/topic', {todos: false, background: '#FFF', topic, chapter}) %>
                 <% }) %>
             </div>
         </div>
