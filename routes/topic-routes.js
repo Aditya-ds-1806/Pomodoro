@@ -1,5 +1,5 @@
 const express = require('express');
-const { addTopic, revisedTopic } = require('../controllers/topics');
+const { addTopic, revisedTopic, removeTopic } = require('../controllers/topics');
 const { hasAuthenticated } = require('../middlewares/authentication');
 
 const router = express.Router();
@@ -15,6 +15,12 @@ router.post('/addTopic', async (req, res) => {
 router.post('/revisedTopic', async (req, res) => {
     const { user } = req;
     const response = await revisedTopic(user._id, req.body);
+    res.send(response);
+});
+
+router.post('/removeTopic', async (req, res) => {
+    const { user } = req;
+    const response = await removeTopic(user._id, req.body);
     res.send(response);
 });
 
