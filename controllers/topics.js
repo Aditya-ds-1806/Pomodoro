@@ -92,9 +92,31 @@ async function getRevisingTopics(userID) {
     }
 }
 
+async function removeTopic(userID, { topic, chapter }) {
+    try {
+        await User.findByIdAndUpdate(userID, {
+            $pull: {
+                new: { chapter, topic },
+                revising: { chapter, topic },
+            },
+        });
+        return JSON.stringify({
+            status: 200,
+            message: 'Removed topic',
+        });
+    } catch (err) {
+        console.log(err);
+        return JSON.stringify({
+            status: 500,
+            reason: new Error(err).message,
+        });
+    }
+}
+
 module.exports = {
     addTopic,
     revisedTopic,
     getNewTopics,
     getRevisingTopics,
+    removeTopic,
 };
