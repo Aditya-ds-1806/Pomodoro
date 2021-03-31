@@ -1,11 +1,14 @@
 const router = require('express').Router();
 const { getSubjects, getSyllabus } = require('../controllers/subjects');
+const { getNewTopics, getRevisingTopics } = require('../controllers/topics');
 const { hasAuthenticated } = require('../middlewares/authentication');
 
 router.use(hasAuthenticated);
 
-router.get('/home', (req, res) => {
-    res.render('index', { avatar: req.user.avatar });
+router.get('/home', async (req, res) => {
+    const newTopics = await getNewTopics(req.user._id);
+    const revisingTopics = await getRevisingTopics(req.user._id);
+    res.render('index', { avatar: req.user.avatar, newTopics, revisingTopics });
 });
 
 router.get('/subjects', async (req, res) => {
