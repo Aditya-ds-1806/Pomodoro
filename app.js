@@ -5,6 +5,7 @@ const passport = require('passport');
 const session = require('cookie-session');
 const authRoutes = require('./routes/auth-routes');
 const dashboardRoutes = require('./routes/dashboard-routes');
+const topicRoutes = require('./routes/topic-routes');
 require('./auth/config');
 
 const app = express();
@@ -12,7 +13,7 @@ const app = express();
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
 }, (err) => {
     if (err) throw new Error(err);
     console.log('Connected to DB');
@@ -29,6 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', authRoutes);
+app.use('/', topicRoutes);
 app.use('/dashboard', dashboardRoutes);
 app.set('view engine', 'ejs');
 
