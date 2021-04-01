@@ -24,7 +24,7 @@
                 <%- include('partials/progress', {w: '4.5rem'}) %>
                 <% } %>
                 <% newTopics.forEach(({ topic, chapter }) => { %>
-                <%- include('partials/topic', {todos: false, background: '#FFF', topic, chapter}) %>
+                <%- include('partials/topic', {todos: false, topic, chapter}) %>
                 <% }) %>
             </div>
             <div class="col-4 ps-5">
@@ -33,7 +33,7 @@
                 <%- include('partials/progress', {w: '4.5rem'}) %>
                 <% } %>
                 <% revisingTopics.forEach(({ topic, chapter }) => { %>
-                <%- include('partials/topic', {todos: false, background: '#FFF', topic, chapter}) %>
+                <%- include('partials/topic', {todos: false, topic, chapter}) %>
                 <% }) %>
             </div>
         </div>
