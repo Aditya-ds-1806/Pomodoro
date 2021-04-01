@@ -92,6 +92,19 @@ async function getRevisingTopics(userID) {
     }
 }
 
+async function getRevisedTopics(userID) {
+    try {
+        const { revised } = await User.findById(userID, { 'revised.topic': 1, 'revised.date': 1, _id: 0 });
+        return revised;
+    } catch (err) {
+        console.log(err);
+        return JSON.stringify({
+            status: 500,
+            reason: new Error(err).message,
+        });
+    }
+}
+
 async function removeTopic(userID, { topic, chapter }) {
     try {
         await User.findByIdAndUpdate(userID, {
@@ -118,5 +131,6 @@ module.exports = {
     revisedTopic,
     getNewTopics,
     getRevisingTopics,
+    getRevisedTopics,
     removeTopic,
 };
