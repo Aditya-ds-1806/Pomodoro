@@ -29,7 +29,6 @@ router.get('/subjects/:subject', async (req, res) => {
             .sort(({ date: date1 }, { date: date2 }) => date1 - date2)
             ?.pop()?.date || null).fromNow();
         if (entry.lastRevised === 'Invalid date') entry.lastRevised = 'Never';
-        console.log(entry.lastRevised);
         return entry;
         /* eslint-enable no-param-reassign */
     });
