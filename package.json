@@ -20,6 +20,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "feather-icons": "^4.28.0",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.2",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0"
