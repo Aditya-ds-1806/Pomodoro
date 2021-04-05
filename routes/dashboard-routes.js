@@ -11,7 +11,6 @@ const { hasOnboarded, hasNotOnboarded } = require('../middlewares/onboarding');
 router.use(hasAuthenticated);
 
 router.get('/get-started', hasNotOnboarded, (req, res) => {
-    console.log('get-started');
     res.render('onboarding', { avatar: req.user.avatar, home: true });
 });
 
