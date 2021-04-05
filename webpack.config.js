@@ -1,6 +1,7 @@
 /* eslint-disable global-require */
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -22,5 +23,7 @@ module.exports = {
     },
     plugins: [new MiniCssExtractPlugin({
         filename: '[name].css',
+    }), new CopyPlugin({
+        patterns: [{ from: path.resolve(__dirname, 'public', 'src', 'images'), to: path.resolve(__dirname, 'public', 'dist', 'images') }],
     })],
 };
