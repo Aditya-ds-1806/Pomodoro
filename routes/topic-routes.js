@@ -34,7 +34,10 @@ router.post('/removeTopic', hasOnboarded, async (req, res) => {
 router.get('/revisedTopic', hasOnboarded, async (req, res) => {
     const { user } = req;
     const revisedTopics = await getRevisedTopics(user._id);
-    res.send(JSON.stringify(revisedTopics));
+    res.send(JSON.stringify({
+        topics: revisedTopics,
+        revisionCycle: req.user.revisionCycle,
+    }));
 });
 
 router.get('/markDistribution/:grade/:subject', hasOnboarded, async (req, res) => {
