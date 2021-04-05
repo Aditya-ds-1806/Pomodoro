@@ -15,7 +15,6 @@ passport.use(new GoogleStrategy({
         const newUser = await User.create({
             name: profile.displayName,
             avatar: profile.photos[0].value,
-            grade: 10,
             email: profile.emails[0].value,
             googleID: profile.id,
         });
