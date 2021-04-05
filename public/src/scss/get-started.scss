@@ -1,0 +1,16 @@
+@import 'common';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/buttons';
+
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-div {
+    background-color: #ffd6f6;
+}
