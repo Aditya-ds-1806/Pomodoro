@@ -7,6 +7,8 @@ module.exports = {
     entry: {
         home: ['./public/src/scss/home.scss', './public/src/js/home.js'],
         subjects: ['./public/src/scss/subjects.scss', './public/src/js/subjects.js'],
+        'manage-subject': ['./public/src/js/manage-subject.js'],
+        'get-started': ['./public/src/scss/get-started.scss', './public/src/js/get-started.js'],
     },
     output: {
         path: path.resolve(__dirname, 'public', 'dist'),
