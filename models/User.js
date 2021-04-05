@@ -6,6 +6,11 @@ const userSchema = new mongoose.Schema({
     grade: Number,
     email: String,
     googleID: String,
+    onboarding: {
+        type: Boolean,
+        default: false,
+    },
+    revisionCycle: Number,
     new: [{
         chapter: String,
         topic: String,
