@@ -10,46 +10,44 @@
 </head>
 
 <body class="vh-100">
-    <%- include('./partials/navbar') %>
-        <main class="container rounded center">
-            <div class="row justify-content-center">
-                <div class="col-sm-8 col-lg-6 col-xl-4 border border-2 rounded p-5 bg-white">
-                    <h1 class="fs-2 mb-4">Happy Learning!</h1>
-                    <div class="rounded mb-4 text-center img-div">
-                        <img src="/src/images/Light.png" class="img-fluid w-50" alt="lamp">
-                    </div>
-                    <form action="./get-started" method="POST">
-                        <label for="grade" class="form-label fs-4">Choose the exam you are preparing for:</label>
-                        <select id="grade" name="grade" class="form-select mt-2 mb-4">
-                            <option selected value="5">Class 5</option>
-                            <option value="6">Class 6</option>
-                            <option value="7">Class 7</option>
-                            <option value="8">Class 8</option>
-                            <option value="9">Class 9</option>
-                            <option value="10">Class 10</option>
-                        </select>
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <label for="cycle" class="form-label fs-4 mb-0 w-100">Choose the revision cycle</label>
-                            </div>
-                            <div class="col-auto">
-                                <select id="cycle" name="cycle" class="form-select flex-shrink-1">
-                                    <option selected value="1">1 day</option>
-                                    <option value="2">2 days</option>
-                                    <option value="4">4 days</option>
-                                    <option value="7">1 week</option>
-                                    <option value="14">2 weeks</option>
-                                    <option value="21">3 weeks</option>
-                                    <option value="30">1 month</option>
-                                </select>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary text-white mt-4" type="submit">Done</button>
-                    </form>
+    <main class="container rounded center">
+        <div class="row justify-content-center">
+            <div class="col-sm-8 col-lg-6 col-xl-4 border border-2 rounded p-5 bg-white">
+                <h1 class="fs-2 mb-4">Happy Learning!</h1>
+                <div class="rounded mb-4 text-center img-div">
+                    <img src="/src/images/Light.png" class="img-fluid w-50" alt="lamp">
                 </div>
+                <form action="./get-started" method="POST">
+                    <label for="grade" class="form-label fs-4">Choose the exam you are preparing for:</label>
+                    <select id="grade" name="grade" class="form-select mt-2 mb-4">
+                        <option value="10" selected>Class 10</option>
+                        <option value="12">Class 12</option>
+                        <option value="JEE">JEE</option>
+                        <option value="NEET">NEET</option>
+                        <option value="CAT">CAT</option>
+                    </select>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <label for="cycle" class="form-label fs-4 mb-0 w-100">Choose the revision cycle</label>
+                        </div>
+                        <div class="col-auto">
+                            <select id="cycle" name="cycle" class="form-select flex-shrink-1">
+                                <option selected value="1">1 day</option>
+                                <option value="2">2 days</option>
+                                <option value="4">4 days</option>
+                                <option value="7">1 week</option>
+                                <option value="14">2 weeks</option>
+                                <option value="21">3 weeks</option>
+                                <option value="30">1 month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary text-white mt-4" type="submit">Done</button>
+                </form>
             </div>
-        </main>
-        <script src="/dist/get-started.js"></script>
+        </div>
+    </main>
+    <script src="/dist/get-started.js"></script>
 </body>
 
 </html>
