@@ -4,6 +4,8 @@ const {
     revisedTopic,
     removeTopic,
     getRevisedTopics,
+    getNewTopics,
+    getRevisingTopics,
 } = require('../controllers/topics');
 const { getSyllabus } = require('../controllers/subjects');
 const { hasAuthenticated } = require('../middlewares/authentication');
@@ -36,6 +38,24 @@ router.get('/revisedTopic', hasOnboarded, async (req, res) => {
     const revisedTopics = await getRevisedTopics(user._id);
     res.send(JSON.stringify({
         topics: revisedTopics,
+        revisionCycle: req.user.revisionCycle,
+    }));
+});
+
+router.get('/newTopic', hasOnboarded, async (req, res) => {
+    const { user } = req;
+    const newTopics = await getNewTopics(user._id);
+    res.send(JSON.stringify({
+        topics: newTopics,
+        revisionCycle: req.user.revisionCycle,
+    }));
+});
+
+router.get('/revisingTopic', hasOnboarded, async (req, res) => {
+    const { user } = req;
+    const revisingTopics = await getRevisingTopics(user._id);
+    res.send(JSON.stringify({
+        topics: revisingTopics,
         revisionCycle: req.user.revisionCycle,
     }));
 });
